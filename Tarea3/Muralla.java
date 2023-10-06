@@ -16,7 +16,7 @@ public class Muralla extends Zona {
 
     @Override
     public void Interactuar(Pikinim[] colorPikinim) {
-        System.out.println("--------------------------------------");
+        
         if (completada) {
             System.out.println("No queda nada por hacer aca!");
         } else {

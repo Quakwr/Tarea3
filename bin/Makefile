@@ -7,13 +7,17 @@ JC = javac
 MAIN = Juego
 
 CLASSES = \
-        Estudio.java \
-		Carta.java \
-		Evento.java \
-		Mano.java \
-		Ramo.java \
-        Mazo.java \
-        tablero.java \
+        Enemigo.java \
+		ILevantar.java \
+		Magenta.java \
+		Muralla.java \
+		Pieza.java \
+        Pikinim.java \
+		Cyan.java \
+        Amarillo.java \
+		Pieza.java \
+		Pildora.java \
+		Zona.java \
         Juego.java
 
 default: classes

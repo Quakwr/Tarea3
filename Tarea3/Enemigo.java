@@ -48,6 +48,7 @@ public class Enemigo extends Zona implements ILevantar {
     }
 
     public void Levantar(Pikinim[] colorPikinim) {
+        Juego juego = new Juego();
         int aLevantar = 0;
         System.out
                 .println("Has logrado derrotar al enemigo!! veamos si puedes levantarlo para llevarte una recompensa!");
@@ -64,7 +65,7 @@ public class Enemigo extends Zona implements ILevantar {
             System.out.println(
                     "¿Qué color de pikinim desea que se multiplique? (cantidad a multiplicar) " + peso);
             System.out.println("1. Cyan 2. Magenta 3. Amarillo");
-            Scanner scanner = new Scanner(System.in);
+            Scanner scanner = juego.getScanner();
             int opcion = scanner.nextInt();
 
             switch (opcion) {
@@ -79,6 +80,9 @@ public class Enemigo extends Zona implements ILevantar {
                     colorPikinim[2].multiplicar(peso);
                     break;
             }
+            completada = true;
+        } else {
+            System.out.println("Vaya! no has podido... debilucho");
             completada = true;
         }
     }

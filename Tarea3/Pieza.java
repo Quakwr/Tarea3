@@ -18,6 +18,9 @@ public class Pieza extends Zona implements ILevantar {
         if (completada) {
             System.out.println("No queda nada que hacer aquí.");
         } else {
+            System.out.println("--------------------------------------");
+            System.out.println("Has encontrado una pieza! ahora intentaras levantarla para poder llevartela!");
+            System.out.println("...");
             Levantar(colorPikinim);
         }
     }
@@ -29,10 +32,10 @@ public class Pieza extends Zona implements ILevantar {
         }
 
         if (sumaPikinim >= peso) {
-            System.out.println("Has recuperado un tesoro.");
+            System.out.println("Has recuperado una pieza!");
             completada = true;
         } else {
-            System.out.println("No puedes levantar la pieza");
+            System.out.println("No puedes levantar la pieza :c");
         }
     }
 
