@@ -7,6 +7,9 @@ public class Enemigo extends Zona implements ILevantar {
     private int ataque;
 
     public Enemigo(int vida, int peso, int ataque) {
+
+        // Constructor de enemigo, le da vida, peso y ataque. 
+
         this.completada = false;
         this.vida = vida;
         this.peso = peso;
@@ -14,31 +17,44 @@ public class Enemigo extends Zona implements ILevantar {
     }
 
     public int getPeso() {
+
+        //getter
+
         return peso;
     }
 
     public void setPeso(int peso) {
+        //setter
         this.peso = peso;
     }
 
     public int getAtaque() {
+
+        //getter
+
         return ataque;
     }
 
     public void setAtaque(int ataque) {
+        //setter
         this.ataque = ataque;
     }
 
     public int getVida() {
+        //getter
         return vida;
     }
 
     public void setVida(int vida) {
+        //setter
         this.vida = vida;
     }
 
     @Override
     public void Interactuar(Pikinim[] colorPikinim) {
+
+        //Pikinim[] colorPikinim, recibe los 3 colores  y utiliza la funcion de Pelear, para pelar contra el enemigo
+
         if (completada) {
             System.out.println("No queda nada que hacer aquí.");
         } else {
@@ -48,6 +64,9 @@ public class Enemigo extends Zona implements ILevantar {
     }
 
     public void Levantar(Pikinim[] colorPikinim) {
+
+        // Pikinim[] colorPikinim, recibe los 3 colores e intenta levantar al enemigo en caso de que el peso de los pikinims sea mayor al del enemigo derrotado.
+
         Juego juego = new Juego();
         int aLevantar = 0;
         System.out
@@ -88,6 +107,9 @@ public class Enemigo extends Zona implements ILevantar {
     }
 
     public void Pelear(Pikinim[] colorPikinim) {
+
+        //Pikinim[] colorPikinim, recibe los 3 colores y pelea con el enemigo haciendo y recibiendo daño, en caso de derrotarlo, intenta levantarlo utilizando Levantar
+
         int ataquePikinim = 0;
         for (Pikinim pikinim : colorPikinim) {
             ataquePikinim += pikinim.getCantidad() * pikinim.getAtaque();

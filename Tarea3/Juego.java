@@ -10,6 +10,8 @@ public class Juego {
     ;
 
     public Juego() {
+
+        // Crea el trablero y constructor de Juego
         mapa[0] = new Pieza(50);
         mapa[1] = new Enemigo(130, 20, 25);
         mapa[2] = new Enemigo(50, 10, 15);
@@ -28,6 +30,9 @@ public class Juego {
     }
 
     public void moverIzq() {
+
+        // Mueve al jugador a la izquerda.
+
         if (turnos > 0) {
             if (posJugador == 0) {
                 posJugador = 10;
@@ -40,6 +45,8 @@ public class Juego {
     }
 
     public void moverDer() {
+
+        //Mueve al jugador a la derecha.
         if (turnos > 0) {
             if (posJugador == 10) {
                 posJugador = 0;
@@ -51,14 +58,18 @@ public class Juego {
     }
 
     public void Quedarse() {
+
+        //El jugador se queda quieto 
         turnos--;
     }
 
     public Scanner getScanner() {
+
+        //Scanner utilizado para detectar las opciones del jugador.
         return scanner;
     }
     public static void main(String[] args) {
-        // Crear una instancia de Juego
+        // Crear una instancia de Juego y main, le da opciones al y muestra toda las opciones necesarias para jugar el juego. Da inicio y termino al juego. le permite la mobilidad al jugador y la opciones en caso de enconrtarse con un muro.
        
         Juego juego = new Juego();
         
@@ -246,6 +257,6 @@ public class Juego {
             System.out.println("...");
             System.out.println("Vuelves a tu planeta.");
         }
-        juego.scanner.close();
+        juego.scanner.close(); //Cierre de scanner
     }
 }

@@ -4,20 +4,30 @@ public class Pildora extends Zona {
     private int peso;
     
     public Pildora(int peso) {
+
+        //Constructor de pildora 
+
         this.completada = false;
         this.peso = peso;
     }
 
     public int getPeso() {
+
+        //getter
         return peso;
     }
 
     public void setPeso(int peso) {
+
+        //setter
         this.peso = peso;
     }
 
     @Override
     public void Interactuar(Pikinim[] colorPikinim) {
+
+        //Pikinim[] colorPikinim, recibe los 3 colores, interactua con la zona y consume una pildora para multiplicar alguno de los pikinims, utilizando su respectivo multiplicar.
+
         Juego juego = new Juego();
         Scanner scanner = juego.getScanner();
         if (completada) {
